@@ -11,7 +11,7 @@ namespace Siscesta
     {
         MySqlConnection con = new MySqlConnection();
 
-        string server = "localhost";
+        string server = "127.0.0.1";
         string port = "3306";
         string user = "root";
         string passwd = "";

@@ -24,16 +24,6 @@ namespace Siscesta
             marca.Descricao = txtDesc.Text;
             marca.CreateTime = DateTime.Now;
             marca.UpdateTime = DateTime.Now;
-
-            if (marca.Add())
-            {
-                MessageBox.Show("Marca cadastrada com sucesso");
-            }
-            else
-            {
-                MessageBox.Show("Ocorreu um erro ao realizar o cadastro da marca");
-            }
-
         }
     }
 }
