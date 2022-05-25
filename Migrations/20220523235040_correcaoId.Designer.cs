@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Siscesta;
 
 namespace Siscesta.Migrations
 {
     [DbContext(typeof(SiscestaDbContext))]
-    partial class SiscestaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220523235040_correcaoId")]
+    partial class correcaoId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

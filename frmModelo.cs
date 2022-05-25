@@ -1,36 +1,39 @@
 ﻿using Siscesta.Model;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Siscesta
 {
-    public partial class frmMarca : Form
+    public partial class frmModelo : Form
     {
         public SiscestaDbContext _context { get; set; }
-
-        public frmMarca()
+        public frmModelo()
         {
             _context = new SiscestaDbContext();
             InitializeComponent();
+            Inicio();
+        }
+
+        private void Inicio()
+        {
+            var marca = _context.Marcas.ToList();
+            cmbMarca.DataSource = marca;
+            cmbMarca.ValueMember = "Id";
+            cmbMarca.DisplayMember = "Descricao";
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Marca marca = new Marca();
-            marca.Descricao = txtDesc.Text;
-            marca.CreateTime = DateTime.Now;
-            marca.UpdateTime = DateTime.Now;
+            Modelo modelo = new Modelo();
+            modelo.Descricao = txtDesc.Text;
+            modelo.CreateTime = DateTime.Now;
+            modelo.UpdateTime = DateTime.Now;
+            modelo.MarcaId = int.Parse(cmbMarca.SelectedValue.ToString());
 
             try
             {
-                _context.Marcas.Add(marca);
+                _context.Modelos.Add(modelo);
                 _context.SaveChanges();
                 MessageBox.Show("Cadastro realizado com sucesso");
             }
@@ -38,7 +41,6 @@ namespace Siscesta
             {
                 MessageBox.Show($"Ocorreu o seguinte erro: {ex.Message}");
             }
-
 
         }
     }

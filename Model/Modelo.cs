@@ -9,7 +9,7 @@ namespace Siscesta.Model
     public class Modelo : ClasseBase
     {
         public string Descricao { get; set; }
-        public int IdMarca { get; set; }
+        public int MarcaId { get; set; }
         public Marca Marca { get; set; }
     }
 }

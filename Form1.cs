@@ -24,5 +24,11 @@ namespace Siscesta
             frmMarca frm = new frmMarca();
             frm.ShowDialog();
         }
+
+        private void modeloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmModelo frm = new frmModelo();
+            frm.ShowDialog();
+        }
     }
 }

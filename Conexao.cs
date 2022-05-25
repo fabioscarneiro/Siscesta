@@ -23,6 +23,7 @@ namespace Siscesta
                 $"password={passwd}; port={port}";
         }
 
+       
         public MySqlConnection connect()
         {
             if(con.State == System.Data.ConnectionState.Closed)

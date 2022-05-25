@@ -66,6 +66,7 @@
             this.modeloToolStripMenuItem.Name = "modeloToolStripMenuItem";
             this.modeloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modeloToolStripMenuItem.Text = "Modelo";
+            this.modeloToolStripMenuItem.Click += new System.EventHandler(this.modeloToolStripMenuItem_Click);
             // 
             // Form1
             // 
