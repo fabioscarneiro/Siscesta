@@ -21,13 +21,13 @@ namespace Siscesta
 
         private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmMarca frm = new frmMarca();
+            frmList frm = new frmList("Marca");
             frm.ShowDialog();
         }
 
         private void modeloToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmModelo frm = new frmModelo();
+            frmList frm = new frmList("Modelo");
             frm.ShowDialog();
         }
     }
